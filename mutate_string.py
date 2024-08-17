@@ -1,12 +1,12 @@
 def mutate_string(string, position, character):
-    # Convert the string to a list to make it mutable
-    string_list = list(string)  # String lai list ma convert garne
+    # String lai list ma convert garne
+    string_list = list(string)  
 
-    # Change the character at the specified position
-    string_list[position] = character  # List ma specified position ma character update garne
+    # List ma specified position ma character update garne
+    string_list[position] = character 
 
-    # Join the list back into a string
-    mutated_string = ''.join(string_list)  # List lai join garera string banaucha
+    # List lai join garera string banaucha
+    mutated_string = ''.join(string_list)  
 
     return mutated_string  # Modified string return garne
 
