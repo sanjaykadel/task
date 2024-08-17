@@ -1,0 +1,32 @@
+    Line A and B:
+    Both s1 and s2 point to the same string literal "Java" in the string pool. In Java, string literals are interned, meaning they refer to the same memory location if they have the same content.
+
+    Line E:
+    System.out.println(s1 == s2);
+    Since both s1 and s2 refer to the same object in the string pool, this comparison returns true.
+    Output: true
+
+    Line F:
+    System.out.println(s1.equals(s2));
+    The equals() method compares the content of the strings, and since both s1 and s2 have the same content "Java", this also returns true.
+    Output: true
+
+    Line G:
+    System.out.println(sb1.toString() == s1);
+    sb1.toString() creates a new String object with the content "Java", but it’s a different object in memory than s1. The == operator checks for reference equality, and since they are different objects, this comparison returns false.
+    Output: false
+
+    Line H:
+    System.out.println(sb1.toString().equals(s1));
+    Here, the equals() method checks the content of the strings. Since both sb1.toString() and s1 have the content "Java", this comparison returns true.
+    Output: true
+
+Final Output:
+
+    true is printed twice (in lines E and F).
+    false is printed once (in line G).
+    true is printed once (in line H).
+
+Thus, the correct answer is:
+
+b. true is printed out exactly twice.
